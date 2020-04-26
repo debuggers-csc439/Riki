@@ -1,0 +1,72 @@
+{
+  "name": {
+    "active": true,
+    "authentication_method": "cleartext",
+    "password": "1234",
+    "authenticated": false,
+    "roles": [],
+    "email": "name@gmail.com",
+    "phone": "513-879-4303",
+    "project": "Riki project"
+  },
+  "sam": {
+    "active": true,
+    "authentication_method": "cleartext",
+    "password": "1234",
+    "authenticated": false,
+    "roles": [],
+    "email": "sam@gmail.com",
+    "phone": "513-879-4608",
+    "project": "Riki project"
+  },
+  "Bhuwan": {
+    "active": true,
+    "authentication_method": "cleartext",
+    "password": "1234",
+    "authenticated": true,
+    "roles": [],
+    "email": "Bhuwan@gmail.com",
+    "phone": "919-917-1408",
+    "project": "Build About me page"
+  },
+  "Bisrat": {
+    "active": true,
+    "authentication_method": "cleartext",
+    "password": "1234",
+    "authenticated": true,
+    "roles": [],
+    "email": "Bisrat@gmail.com",
+    "phone": "513-879-4807",
+    "project": "Build logout functionality"
+  },
+  "Kachew": {
+    "active": true,
+    "authentication_method": "cleartext",
+    "password": "1234",
+    "authenticated": true,
+    "roles": [],
+    "email": "Kachew@gmail.com",
+    "phone": "513-879-4909",
+    "project": "Export to PDF"
+  },
+  "Faikat": {
+    "active": true,
+    "authentication_method": "cleartext",
+    "password": "1234",
+    "authenticated": true,
+    "roles": [],
+    "email": "Faikat@gmail.com",
+    "phone": "513-879-4101",
+    "project": "Additional Users"
+  },
+  "Naomi": {
+    "active": true,
+    "authentication_method": "cleartext",
+    "password": "1234",
+    "authenticated": true,
+    "roles": [],
+    "email": "Naomi@gmail.com",
+    "phone": "513-879-4202",
+    "project": "Edit History"
+  }
+}
