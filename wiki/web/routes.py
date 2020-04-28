@@ -2,6 +2,9 @@
     Routes
     ~~~~~~
 """
+import os
+import pdfkit
+import markdown
 from flask import Blueprint
 from flask import flash
 from flask import redirect
@@ -46,6 +49,30 @@ def index():
 @protect
 def display(url):
     page = current_wiki.get_or_404(url)
+    return render_template('page.html', page=page)
+
+
+@bp.route('/pdf/<path:url>/', methods=['GET', 'POST'])
+@protect
+def pdf(url):
+    page = current_wiki.get_or_404(url)
+    abs_path = os.path.dirname(os.path.abspath(__file__))
+    directory = os.path.dirname(abs_path)
+    dir_next = os.path.dirname(directory)
+    file_path = os.path.join(dir_next, 'content', url+'.md')
+    path_html = os.path.join(dir_next, 'content', url + '.html')
+    path = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
+    config = pdfkit.configuration(wkhtmltopdf=path)
+    #web = 'http://127.0.0.1:5000/' + url + '/'
+    #pdfkit.from_url(web, url + '.pdf', configuration=config)
+    output_filename = url + '.pdf'
+    #html_file = markdown.markdownFromFile(file_path)
+    #f = open(os.path.join(dir_next, 'content', url + '.html'), "w+")
+    markdown.markdownFromFile(file_path, path_html)
+    #f.write(str(html_file))
+    #f.close()
+
+    pdfkit.from_file(path_html, output_filename, configuration=config)
     return render_template('page.html', page=page)
 
 
