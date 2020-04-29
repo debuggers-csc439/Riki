@@ -3,7 +3,7 @@
     "active": true,
     "authentication_method": "cleartext",
     "password": "1234",
-    "authenticated": false,
+    "authenticated": true,
     "roles": [],
     "email": "name@gmail.com",
     "phone": "513-879-4303",
