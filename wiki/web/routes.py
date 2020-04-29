@@ -28,6 +28,11 @@ from wiki.web.user import protect
 
 bp = Blueprint('wiki', __name__)
 
+@bp.route('/history/')
+@protect
+def history():
+    page = current_wiki.get('history')
+    return render_template('history.html')
 
 @bp.route('/history/')
 @protect
