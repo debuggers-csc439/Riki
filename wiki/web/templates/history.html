@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}History{% endblock title %}
+
+{% block content %}
+
+<body>
+
+ Last edited by {{ current_user.name }} at
+<script type="text/javascript">
+<!--
+document.write(document.lastModified);
+// -->
+</script>
+</body>
+	{{ page }}
+{% endblock content %}
+
